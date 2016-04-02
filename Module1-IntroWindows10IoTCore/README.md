@@ -321,7 +321,16 @@ In this exercise, you'll again use the red LED, but using the GHI driver code, a
 
 In this task, you'll add the **FEZ HAT driver** (using the NuGet package) so you can control the FEZ HAT's LED and make it blink, using the driver library. There are some differences with the code to light up the FEZ HAT LEDs. If you want to explore the "raw" GPIO approach, we have examples in the Open Hack lab. For our follow-up Azure work, it's important to familiarize with the HAT APIs. This is akin to using Arduino shields and their libraries vs. raw IO.
 
-1. Open the **IoTWorkshop.sln** solution file from the **Begin** folder of this exercise, or you can continue working with your solution from the previous exercise.
+1. Open the **IoTWorkshop.sln** solution file from the **Begin** folder of this exercise, or you can continue working with your solution from the previous exercise.  If you do continue working with your solution from your previous exercise, make sure you comment out or delete the line 'InitializeGpio()':
+
+	````C#
+    public MainPage()
+    {
+        this.InitializeComponent();
+
+        // InitializeGpio();
+    }
+
 
 1. Install the FEZ HAT drivers using the [GHIElectronics.UWP.Shields.FEZHAT NuGet package](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/ "FEZ HAT NuGet Package"). To do this, open the **Package Manager Console** (_Tools > NuGet Package Manager > Package Manager Console_) and execute the following command: (You could instead add the package using the GUI if you desire.)
 
